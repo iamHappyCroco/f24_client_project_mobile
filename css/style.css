@@ -1,0 +1,340 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Skip to Main Content */
+
+a[href="#main"] {
+    position: absolute;
+    top: -50px;
+    left: 10px;
+}
+
+a[href="#main"] {
+    background-color: #004F71;
+    color: white;
+    padding: 10px 15px;
+    font-size: 1.1em;
+    z-index: 1;
+    text-decoration: none;
+    transition: top 0.5s ease-out;
+}
+
+a[href="#main"]:focus {
+    top: 10px;
+    left: 10px;
+}
+
+/* Top Navigation Menu */
+nav {
+    background-color: #00274C;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: relative;
+    z-index: 0;
+}
+
+nav img {
+    max-width: 50px;
+    margin-right: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 15px;
+    color: white;
+    font-size: 0.5em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+nav ul li a:hover,
+nav ul li a:focus,
+nav ul li a.active {
+    background-color: #FFCB05;
+    color: #00274C;
+    border-radius: 5px;
+}
+
+/* Main Content */
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+    color: #00274C;
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 1.5em;
+    text-align: center;
+    color: #00274C;
+}
+
+main h2 {
+    font-size: 2em;
+    color: #00274C;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    grid-column: span 2;
+    font-weight: bold;
+    border-bottom: 2px solid #FFCB05;
+}
+
+main h3 {
+    font-size: 1.8em;
+    color: #004F71;
+    margin-bottom: 15px;
+    grid-column: span 2;
+}
+
+main h4 {
+    font-size: 1.5em;
+    color: #004F71;
+    margin-bottom: 10px;
+    grid-column: span 2;
+    font-style: oblique;
+}
+
+main p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #333;
+    grid-column: span 2;
+}
+
+/* Styling for unordered lists inside main */
+main ul {
+    list-style-type: disc;
+    margin-left: 40px;
+    margin-bottom: 20px;
+    color: #333;
+    grid-column: span 2;
+}
+
+/* Styling for list items */
+main ul li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    position: relative;
+    color: #00274C;
+}
+
+/* Custom bullets for list items */
+main ul li::before {
+    content: '•';
+    color: #FFCB05;
+    font-size: 1.5em;
+    position: absolute;
+    left: -30px;
+    top: 0;
+}
+
+
+@media (min-width: 320px) {
+    main {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    main h2,
+    main h3,
+    main p,
+    main ul {
+        grid-column: span 1;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: #00274C;
+    color: white;
+    padding: 0px 40px 20px 40px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-width: 320px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 30px;
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 0.7em;
+    border-bottom: 1px solid #FFCB05;
+    padding-bottom: 10px;
+    display: inline-block;
+    width: 150px;
+}
+
+.footer-section p,
+.footer-section a {
+    color: white;
+    font-size: 0.5em;
+    margin-bottom: 10px;
+}
+
+.footer-section a:hover {
+    color: #FFCB05;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 1px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.5em;
+}
+
+.footer-section ul li a:hover {
+    color: #00274C;
+}
+
+.footer-section .social a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 2px solid #FFCB05;
+    padding-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 0.5em;
+    margin: 0;
+}
+
+
+@media (min-width: 769px) {
+    .footer-container {
+        flex-direction: row;
+        text-align: left;
+    }
+}
+
+@media (min-width: 320px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 0px;
+    }
+}
+
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+
+/* Optional styling for image containers */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+
+/* Buttons and Links */
+button,
+a {
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover,
+a:hover {
+    background-color: #FFCB05;
+    color: #00274C;
+}
+
+
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none;
+        transition: none;
+    }
+}
