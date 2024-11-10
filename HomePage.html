@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/html5reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="/images/UMSI_signature_vertical_informal_solidblue.jpg" type="image/jpg">
+    <link rel="icon" href="images/UMSI_signature_vertical_informal_solidblue.jpg" type="image/jpg">
     <title>Student Success Portal</title>
 </head>
 
@@ -15,7 +15,7 @@
     <header>
         <nav>
             <ul>
-                <li><a href="HomePage.html">Home</a></li>
+                <li><a href="HomePage.html" class="current">Home</a></li>
                 <li><a href="AcademicAdvisingSupport.html">Academic Advising Support</a></li>
                 <li><a href="FoodPantry.html">Food Pantry</a></li>
                 <li><a href="CEW+.html">CEW+</a></li>
@@ -47,7 +47,7 @@
             <article>
                 <h3>University Health Service (UHS)</h3>
                 <figure>
-                    <img src="/images/UHS.jpg" alt="University Health Services building">   
+                    <img src="images/UHS.jpg" alt="University Health Services building" style="width:700px; height:auto;">   
                 </figure>
                 <p>University Health Service (UHS): Access comprehensive medical care, including routine check-ups,
                     vaccinations, and specialist referrals.</p>
@@ -55,8 +55,8 @@
             <article>
                 <h3>Recreational Sports</h3>
                 <figure>
-                    <img src="/images/UMSI_CampusFall_UMSIBackpack_02.jpg"
-                        alt="A student wears a UMSI backpack in fall on the drag.">
+                    <img src="images/UMSI_CampusFall_UMSIBackpack_02.jpg"
+                        alt="A student wears a UMSI backpack in fall on the drag." style="width:700px; height:auto;">
                 </figure>
                 <p>Participate in various fitness programs, sports clubs, and use of gym facilities to stay active and
                     healthy.</p>
@@ -129,8 +129,7 @@
     
             <div class="footer-section contact">
                 <h3>Contact Us</h3>
-                <p> School of Information </br>
-                    University of Michigan
+                <p> School of Information, University of Michigan
                     </p>
                 <p>105 S State St.
                     Ann Arbor, MI 48109-1285</p>
@@ -138,10 +137,12 @@
             
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 University of Michigan. All rights reserved.</p>
+            <p>&copy; <span id="current-year"></span> University of Michigan. All rights reserved.</p>
         </div>
     </footer>
-    
+    <script>
+        document.getElementById("current-year").textContent = new Date().getFullYear();
+    </script>
 </body>
 
 </html>

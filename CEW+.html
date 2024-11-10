@@ -16,10 +16,10 @@
         <!-- <img src="/images/Page3_1.png" alt="The big picture of cew+" style="width:1000px; height:auto;"> -->
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="HomePage.html">Home</a></li>
                 <li><a href="AcademicAdvisingSupport.html">Academic Advising Support</a></li>
                 <li><a href="FoodPantry.html">Food Pantry</a></li>
-                <li><a href="CEW+.html">CEW+</a></li>
+                <li><a href="CEW+.html" class="current">CEW+</a></li>
             </ul>
         </nav>
         <h1>CEW+</h1>
@@ -28,10 +28,8 @@
     </header>
     <main id="main">
 
-        <section>
-            <h2>
-                Brief Introduction of Us 
-            </h2>
+        <div>
+            <h2> Brief Introduction </h2>
             <p>
                 At CEW+, we navigate circumstantial barriers by providing academic, financial, and professional support
                 to help you reach your personal potential. Established to support women through higher education, we
@@ -40,9 +38,10 @@
                 CEW+, and we're here to help you reach your potential.
             </p>
             <figure>
-                <img src="images/Page3_LOGO.png" alt="The logo of cew+" style="width:500px; height:auto;">
+                <img src="images/Page3_LOGO.png" alt="The logo of cew+" style="width:300px; height:auto;">
             </figure>
-
+        </div>
+        <div>
             <h2>Our History</h2>
             <p>
                 Established in 1964, the Center for the Education of Women+ was a pioneering university women's center.
@@ -53,7 +52,8 @@
                 facing education, employment, or other life issues.
             </p>
             <p><a href="https://www.cew.umich.edu/about/timeline/">Explore our timeline.</a></p>
-
+        </div>
+        <div>
             <h2>WHAT WE DO</h2>
             <p>
                 CEW+ provides immediate and ongoing services and the financial support needed to ensure educational
@@ -69,20 +69,16 @@
                 <li>Advocacy Initiatives</li>
             </ul>
 
-
+        </div>
+        <div>
             <h2>The CEW+ Team</h2>
             <p>Our dedicated team is passionate about helping underserved communities and individuals at the University and beyond thrive.</p>
             <p><a href="https://www.cew.umich.edu/about/our-team/">Meet our team.</a></p>
-        </section>
-
-        <section>
             <h3>Opening Time</h3>
             <figure>
                 <img src="images/Page3_2.png" alt="opening hours and the basic infrastracture of cew+" style="width:800px; height:auto;">
             </figure>
-
-        </section>
-
+        </div>
 
     </main>
     
@@ -115,10 +111,12 @@
             
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 University of Michigan. All rights reserved.</p>
+            <p>&copy; <span id="current-year"></span> University of Michigan. All rights reserved.</p>
         </div>
     </footer>
-
+    <script>
+        document.getElementById("current-year").textContent = new Date().getFullYear();
+    </script>
 </body>
 
 </html>
